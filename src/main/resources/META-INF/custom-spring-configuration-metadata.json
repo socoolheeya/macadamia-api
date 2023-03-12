@@ -1,0 +1,40 @@
+{
+  "properties": [
+    {
+      "name": "security.jwt.secret-key",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "security.jwt.access-expiration-time",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "security.jwt.refresh-expiration-time",
+      "type": "java.lang.Integer"
+    }
+  ],
+  "hints": [
+    {
+      "name": "security.jwt.secret-key",
+      "values": [
+        {
+          "value": "test",
+          "description": "this is jwt secret key for http rest api"
+        }
+      ]
+    },
+    {
+      "name": "security.jwt.access-expiration-time",
+      "values": [
+        {
+          "value": "3600",
+          "description": "this is valid hour for jwt secret key"
+        },
+        {
+          "value": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
