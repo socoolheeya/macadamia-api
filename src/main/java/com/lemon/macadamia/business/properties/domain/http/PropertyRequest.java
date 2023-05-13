@@ -1,7 +1,7 @@
 package com.lemon.macadamia.business.properties.domain.http;
 
 import com.lemon.macadamia.business.commons.domain.Page;
-import com.lemon.macadamia.business.properties.domain.entity.Property;
+import com.lemon.macadamia.business.properties.domain.Property;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

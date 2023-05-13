@@ -1,4 +1,4 @@
-package com.lemon.macadamia.business.rateplans.domain.entity;
+package com.lemon.macadamia.business.rateplans.adapter.out.entity;
 
 import com.lemon.macadamia.business.commons.BaseEntity;
 import lombok.AccessLevel;
@@ -12,14 +12,14 @@ import java.math.BigInteger;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Description("요금제")
-public class RatePlan extends BaseEntity {
+public class RatePlanEntity extends BaseEntity {
 
     @Id
     BigInteger id;
     String name;
     String description;
-    RatePlanPolicy ratePlanPolicy;
-    CancelPolicy cancelPolicy;
+    RatePlanPolicyEntity ratePlanPolicy;
+    CancelPolicyEntity cancelPolicy;
     Boolean cancellable;
     int maxAdult;
     int minAdult;

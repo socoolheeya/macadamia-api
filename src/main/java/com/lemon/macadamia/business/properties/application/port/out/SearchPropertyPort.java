@@ -1,6 +1,6 @@
 package com.lemon.macadamia.business.properties.application.port.out;
 
-import com.lemon.macadamia.business.properties.domain.entity.Property;
+import com.lemon.macadamia.business.properties.domain.Property;
 import org.springframework.data.domain.PageRequest;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

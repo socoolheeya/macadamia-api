@@ -4,7 +4,7 @@ import com.lemon.macadamia.business.properties.application.port.in.SavePropertyU
 import com.lemon.macadamia.business.properties.application.port.in.SearchPropertyUseCase;
 import com.lemon.macadamia.business.properties.application.port.out.SavePropertyPort;
 import com.lemon.macadamia.business.properties.application.port.out.SearchPropertyPort;
-import com.lemon.macadamia.business.properties.domain.entity.Property;
+import com.lemon.macadamia.business.properties.domain.Property;
 import com.lemon.macadamia.business.properties.domain.http.PropertyRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;

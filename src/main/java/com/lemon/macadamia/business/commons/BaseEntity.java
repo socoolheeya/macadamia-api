@@ -10,17 +10,19 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import javax.persistence.Column;
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
-@SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
+@MappedSuperclass
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class BaseEntity {
+public abstract class BaseEntity {
     @CreatedBy
     String createdBy;
 
     @CreatedDate
+    @Column(updatable = false)
     LocalDateTime createdAt;
 
     @LastModifiedBy

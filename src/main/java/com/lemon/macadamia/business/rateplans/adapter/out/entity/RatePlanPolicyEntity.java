@@ -1,4 +1,4 @@
-package com.lemon.macadamia.business.rateplans.domain.entity;
+package com.lemon.macadamia.business.rateplans.adapter.out.entity;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -10,9 +10,11 @@ import java.math.BigInteger;
 
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Description("취소 정책")
-public class CancelPolicy {
+@Description("요금제 정책")
+public class RatePlanPolicyEntity {
     @Id
     BigInteger id;
     String name;
+    CancelPolicyEntity cancelPolicyEntity;
+
 }

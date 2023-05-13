@@ -1,4 +1,4 @@
-package com.lemon.macadamia.business.properties.domain.entity;
+package com.lemon.macadamia.business.properties.adapter.out.entity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -20,14 +20,11 @@ import javax.persistence.Table;
 import java.math.BigInteger;
 
 @Getter
-@Builder
-@Table(name = "property_image")
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name = "property_image")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Description("숙소 이미지")
-public class PropertyImage {
+public class PropertyImageEntity {
     @Id
     @Column(name = "property_image_id")
     BigInteger id;
@@ -37,6 +34,6 @@ public class PropertyImage {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "property_id", foreignKey = @ForeignKey(ConstraintMode.NO_CONSTRAINT))
-    Property property;
+    PropertyEntity property;
 
 }

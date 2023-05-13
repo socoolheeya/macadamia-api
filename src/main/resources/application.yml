@@ -11,7 +11,7 @@ spring:
   cloud:
     config:
       name: macadamia_api
-#      profile: local
+      profile: local
       request-connect-timeout: 12000
       request-read-timeout: 10000
   security:

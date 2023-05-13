@@ -10,29 +10,21 @@ import lombok.experimental.UtilityClass;
 public class RatePlanResponse {
 
     @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor(access = AccessLevel.PROTECTED)
     public static class Search {
 
     }
 
     @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor(access = AccessLevel.PROTECTED)
     public static class searchList {
 
     }
 
     @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor(access = AccessLevel.PROTECTED)
     public static class Save {
 
     }
 
     @Builder
-    @NoArgsConstructor
-    @AllArgsConstructor(access = AccessLevel.PROTECTED)
     public static class Edit {
 
     }

@@ -2,12 +2,11 @@ package com.lemon.macadamia.business.properties.adapter.in;
 
 import com.lemon.macadamia.business.properties.application.port.in.SavePropertyUseCase;
 import com.lemon.macadamia.business.properties.application.port.in.SearchPropertyUseCase;
-import com.lemon.macadamia.business.properties.domain.entity.Property;
+import com.lemon.macadamia.business.properties.domain.Property;
 import com.lemon.macadamia.business.properties.domain.http.PropertyRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
 package com.lemon.macadamia.business.members.repository;
 
-import com.lemon.macadamia.business.properties.domain.entity.Property;
+import com.lemon.macadamia.business.properties.domain.Property;
 
 import java.util.List;
 import java.util.Optional;
