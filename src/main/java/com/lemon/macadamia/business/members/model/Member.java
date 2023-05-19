@@ -3,18 +3,24 @@ package com.lemon.macadamia.business.members.model;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.math.BigInteger;
+
 @Getter
+@Entity
 @NoArgsConstructor
-@Table
+@Table(name = "member")
 public class Member {
 
-    @Id
-    @Column(value = "member_id")
-    private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "member_id")
+    private BigInteger id;
     @Column
     private String email;
     @Column
@@ -23,7 +29,7 @@ public class Member {
     private String name;
 
     @Builder
-    public Member(Long id, String email, String password, String name) {
+    public Member(BigInteger id, String email, String password, String name) {
         this.id = id;
         this.email = email;
         this.password = password;

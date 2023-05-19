@@ -20,14 +20,11 @@ import java.time.LocalDateTime;
 public abstract class BaseEntity {
     @CreatedBy
     String createdBy;
-
     @CreatedDate
     @Column(updatable = false)
     LocalDateTime createdAt;
-
     @LastModifiedBy
     String updatedBy;
-
     @LastModifiedDate
     LocalDateTime updatedAt;
 }

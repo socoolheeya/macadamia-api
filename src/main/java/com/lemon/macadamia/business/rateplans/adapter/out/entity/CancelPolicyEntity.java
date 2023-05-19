@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Description;
 import org.springframework.data.annotation.Id;
 
 import java.math.BigInteger;
+import java.time.LocalDateTime;
 
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -15,4 +16,6 @@ public class CancelPolicyEntity {
     @Id
     BigInteger id;
     String name;
+    LocalDateTime canceledAt;
+    String reason;
 }
