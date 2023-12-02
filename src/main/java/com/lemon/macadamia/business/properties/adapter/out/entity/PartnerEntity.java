@@ -1,7 +1,9 @@
 package com.lemon.macadamia.business.properties.adapter.out.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +19,7 @@ import java.util.List;
 @Getter
 @Entity
 @Table(name = "partner")
+@NoArgsConstructor
 public class PartnerEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "partner_id")

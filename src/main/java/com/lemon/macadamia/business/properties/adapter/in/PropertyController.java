@@ -42,7 +42,7 @@ public class PropertyController {
     }
 
     @PostMapping("")
-    public ResponseEntity<Mono<Property>> saveProperty(@RequestBody PropertyRequest.Save request) {
+    public ResponseEntity<Mono<Property>> saveProperty(@RequestBody PropertyRequest.Registration request) {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(savePropertyUseCase.saveProperty(request));
     }

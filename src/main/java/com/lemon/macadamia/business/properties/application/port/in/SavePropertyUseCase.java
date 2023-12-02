@@ -5,5 +5,5 @@ import com.lemon.macadamia.business.properties.domain.http.PropertyRequest;
 import reactor.core.publisher.Mono;
 
 public interface SavePropertyUseCase {
-    Mono<Property> saveProperty(PropertyRequest.Save request);
+    Mono<Property> saveProperty(PropertyRequest.Registration request);
 }

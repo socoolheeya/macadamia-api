@@ -30,6 +30,7 @@ public class PropertyImageEntity {
     BigInteger id;
     String url;
     String name;
+    String description;
     int order;
 
     @ManyToOne(fetch = FetchType.LAZY)

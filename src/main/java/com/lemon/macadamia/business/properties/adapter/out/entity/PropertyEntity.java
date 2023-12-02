@@ -3,6 +3,8 @@ package com.lemon.macadamia.business.properties.adapter.out.entity;
 import com.lemon.macadamia.business.commons.BaseEntity;
 import com.lemon.macadamia.business.properties.domain.Property;
 import com.lemon.macadamia.business.properties.domain.enums.PropertyEnum;
+import com.lemon.macadamia.common.conveter.SupplierConveter;
+import com.lemon.macadamia.common.enums.Supplier;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,6 +13,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -38,21 +41,29 @@ public class PropertyEntity extends BaseEntity {
     PropertyEnum.Rating rating;
     String type;
     String description;
+    Boolean isActive;
+
+    @Convert(converter = SupplierConveter.class)
+    List<Supplier> suppliers;
 
     @OneToOne(mappedBy = "property")
     PropertyAddressEntity address;
+
     @OneToMany(mappedBy = "property")
     List<PropertyImageEntity> images = new ArrayList<>();
-    @ManyToOne @JoinColumn(name = "partner_id")
+
+    @ManyToOne
+    @JoinColumn(name = "partner_id")
     PartnerEntity partner;
     @Builder
-    public PropertyEntity(BigInteger id, String name, BigInteger partnerId, PropertyEnum.Rating rating, String type, String description) {
+    public PropertyEntity(BigInteger id, String name, BigInteger partnerId, PropertyEnum.Rating rating, String type, String description, Boolean isActive) {
         this.id = id;
         this.name = name;
         this.partnerId = partnerId;
         this.rating = rating;
         this.type = type;
         this.description = description;
+        this.isActive = isActive;
     }
 
     public static Property toDomain(PropertyEntity entity) {

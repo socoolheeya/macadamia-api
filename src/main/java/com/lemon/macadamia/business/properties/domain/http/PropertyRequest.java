@@ -21,7 +21,7 @@ public class PropertyRequest {
     @AllArgsConstructor
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     @FieldDefaults(level = AccessLevel.PRIVATE)
-    public static class Search {
+    public static class GetSearch {
         Long property;
         String name;
     }
@@ -31,7 +31,7 @@ public class PropertyRequest {
     @AllArgsConstructor
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     @FieldDefaults(level = AccessLevel.PRIVATE)
-    public static class SearchList extends Page {
+    public static class GetSearchList extends Page {
         String name;
         BigInteger partnerId;
     }
@@ -41,16 +41,26 @@ public class PropertyRequest {
     @AllArgsConstructor
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     @FieldDefaults(level = AccessLevel.PRIVATE)
-    public static class Save {
+    public static class Registration {
         Property property;
 
     }
 
-    public static class Update {
-
-    }
-
-    public static class Delete {
-
-    }
+//    @Getter
+//    @Builder
+//    @AllArgsConstructor
+//    @NoArgsConstructor(access = AccessLevel.PROTECTED)
+//    @FieldDefaults(level = AccessLevel.PRIVATE)
+//    public static class Modification {
+//
+//    }
+//
+//    @Getter
+//    @Builder
+//    @AllArgsConstructor
+//    @NoArgsConstructor(access = AccessLevel.PROTECTED)
+//    @FieldDefaults(level = AccessLevel.PRIVATE)
+//    public static class Deletion {
+//
+//    }
 }

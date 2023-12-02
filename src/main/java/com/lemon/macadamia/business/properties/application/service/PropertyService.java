@@ -33,8 +33,7 @@ public class PropertyService implements SearchPropertyUseCase, SavePropertyUseCa
     }
 
     @Override
-    @Transactional
-    public Mono<Property> saveProperty(PropertyRequest.Save request) {
+    public Mono<Property> saveProperty(PropertyRequest.Registration request) {
         return savePropertyPort.saveProperty(request.getProperty());
     }
 }
