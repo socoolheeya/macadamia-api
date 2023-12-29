@@ -7,6 +7,10 @@ import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.UtilityClass;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @UtilityClass
 public class RoomResponse {
@@ -15,7 +19,7 @@ public class RoomResponse {
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     @FieldDefaults(level = AccessLevel.PRIVATE)
     public static class SearchList {
-        Room room;
+        Flux<Room> rooms;
     }
 
     @Builder
@@ -23,7 +27,7 @@ public class RoomResponse {
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     @FieldDefaults(level = AccessLevel.PRIVATE)
     public static class Search {
-        Room room;
+        Mono<Room> room;
     }
 
     @Builder
@@ -31,6 +35,6 @@ public class RoomResponse {
     @NoArgsConstructor(access = AccessLevel.PROTECTED)
     @FieldDefaults(level = AccessLevel.PRIVATE)
     public static class Save {
-        Room room;
+        Mono<Room> room;
     }
 }

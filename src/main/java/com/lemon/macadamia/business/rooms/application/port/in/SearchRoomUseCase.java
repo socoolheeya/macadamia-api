@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 import java.math.BigInteger;
 
 public interface SearchRoomUseCase {
-    Flux<RoomResponse.SearchList> searchRooms(PageRequest request);
+    Mono<RoomResponse.SearchList> searchRooms(PageRequest request);
     Mono<RoomResponse.Search> searchRoom(BigInteger roomId);
 
 }

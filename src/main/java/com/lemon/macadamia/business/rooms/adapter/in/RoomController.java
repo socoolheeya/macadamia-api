@@ -32,7 +32,7 @@ public class RoomController {
     }
 
     @GetMapping("")
-    public ResponseEntity<Flux<RoomResponse.SearchList>> getRooms(PageRequest pageRequest) {
+    public ResponseEntity<Mono<RoomResponse.SearchList>> getRooms(PageRequest pageRequest) {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(searchRoomUseCase.searchRooms(pageRequest));
     }
